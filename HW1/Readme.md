@@ -25,7 +25,7 @@ $$
 in which $W, b$ mean the weight and bias of layer, and $X,z$ mean the input and output.
 
 So, follow the chain rule, the gradient of $W,b$ and $X$ is
-！[]{https://latex.codecogs.com/svg.image?\frac{\partial&space;l}{\partial&space;w}=\frac{\partial&space;l}{\partial&space;z}&space;X^{T},\frac{\partial&space;l}{\partial&space;b}=\frac{\partial&space;l}{\partial&space;z},&space;\frac{\partial&space;l}{\partial&space;x}=W&space;\frac{\partial&space;l}{\partial&space;x}}
+![]{https://latex.codecogs.com/svg.image?\\\frac{\partial&space;l}{\partial&space;w}=\frac{\partial&space;l}{\partial&space;z}&space;X^{T},\frac{\partial&space;l}{\partial&space;b}=\frac{\partial&space;l}{\partial&space;z},&space;\frac{\partial&space;l}{\partial&space;x}=W&space;\frac{\partial&space;l}{\partial&space;x}}
 
 
 ### 2.2 ReLU layer
