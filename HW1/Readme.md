@@ -16,58 +16,8 @@ Follow the pipeline below you can reproduce the project:
 
 In order to build a two-layer neural network classifier using numpy, we first need to calculate the explicit gradient of each layer. In this task, I use two fully-connected layer with ReLU and cross-entropy loss.
 
-### 2.1 Fully-connected Layer
-
-We denote the loss of network as $l$, and the forward propagation of fully-connected layer can be write as
-$$
-XW + b = Z
-$$
-in which $W, b$ mean the weight and bias of layer, and $X,z$ mean the input and output.
-
-So, follow the chain rule, the gradient of $W,b$ and $X$ is
-![]{https://latex.codecogs.com/svg.image?\\\frac{\partial&space;l}{\partial&space;w}=\frac{\partial&space;l}{\partial&space;z}&space;X^{T},\frac{\partial&space;l}{\partial&space;b}=\frac{\partial&space;l}{\partial&space;z},&space;\frac{\partial&space;l}{\partial&space;x}=W&space;\frac{\partial&space;l}{\partial&space;x}}
-
-
-### 2.2 ReLU layer
-
-Since the forward propagation of ReLU is 
-$$
-\operatorname{ReLU}(z)= \begin{cases}z & z>0 \\ 0 & z<=0\end{cases}
-$$
-
-
-, so the gradient of ReLU is 
-$$
-\begin{aligned}
-\delta^{l}=\frac{\partial L}{\partial z^{l+1}} \frac{\partial z^{l+1}}{\partial z^{l}}
-= \begin{cases}\delta^{l+1} & z^{l}>0 \\ 0 & z^{l}<=0\end{cases}
-\end{aligned}
-$$
-
-
-
-
-### 2.3 cross-entropy loss
-
-When we use the cross entropy loss with softmax, the loss function is 
-$$
-\begin{gathered}
-a_{i}=e^{y_{i}} / \sum_{k} e^{y_{k}} \\
-L\left(y, y^{*}\right)=-\sum_{i} y_{i}^{*} \log a_{i}
-\end{gathered}
-$$
-So the gradient of  $y_j$ is 
-$$
-\begin{aligned}
-&\frac{\partial L}{\partial y_{j}}=-\sum_{i} \frac{\partial\left(y_{i}^{*} \log a_{i}\right)}{\partial a_{i}} * \frac{\partial a_{i}}{\partial y_{j}} \\
-&=-\sum_{i} \frac{y_{i}^{*}}{a_{i}} * \frac{\partial a_{i}}{\partial y_{j}} \\
-&=-\frac{y_{j}^{*}}{a_{j}} * a_{j}\left(1-a_{j}\right)+\sum_{i \neq j} \frac{y_{i}^{*}}{a_{i}} * d_{i} a_{i} a_{\text {j}} \\
-&=-y_{j}^{*}\left(1-a_{j}\right)+\sum_{i \neq j} y_{i}^{*} a_{j} \\
-&=-y_{j}^{*}+\sum_{i} y_{i}^{*} a_{j} \\
-&=a_{j}-y_{j}^{*}
-\end{aligned}
-$$
- For more information, you can refer to my code.
+Since github can not show the formulas in markdown format, you can refer to the report for full text.
+For more information, you can refer to my code.
 
 Reference: https://blog.csdn.net/csuyzt/article/details/81839388
 
@@ -129,7 +79,7 @@ After hyper-parameter search, the best hyper-parameter pair is
 
 By fix the hyper-parameter as the best one, I will show the learning curve below
 
-<img src="./fig/Training_Curve.jpg"  style="zoom: 5%;" /><img src="./fig/Loss.jpg"  style="zoom: 5%;" />
+<img src="./fig/Training_Curve.jpg"  style="zoom: 1%;" /><img src="./fig/Loss.jpg"  style="zoom: 1%;" />
 
 ​                                            Fig 1: The learning curve and loss curve
 
