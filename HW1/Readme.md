@@ -82,6 +82,6 @@ By fix the hyper-parameter as the best one, I draw the learning curve below. Fro
 
 ### 3.3 Parameter visualization
 
-Here I draw the histogram of layers' weight and bias.![]{./fig/fc1_Weight.jpg} ![]{./fig/fc2_Weight.jpg}
+Here I draw the histogram of layers' weight and bias.[Weights 1](./fig/fc1_Weight.jpg) ![Weights 2](./fig/fc2_Weight.jpg)
 
 From the figure, the distribution of weights in different layer are close, but the bias of the second layer is more dispersed than that of the first layer 
