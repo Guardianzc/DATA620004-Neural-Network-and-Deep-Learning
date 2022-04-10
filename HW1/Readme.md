@@ -77,17 +77,11 @@ After hyper-parameter search, the best hyper-parameter pair is
 
 ### 3.2 Learning Curve
 
-By fix the hyper-parameter as the best one, I draw the learning curve below. From the figure, the model coverages at about step 1000, and performs similarly on the validation and test sets. \\
-    [Training Curve](./fig/Training_Curve.jpg)  
-    [Loss](./fig/Loss.jpg)
+By fix the hyper-parameter as the best one, I draw the learning curve below. From the figure, the model coverages at about step 1000, and performs similarly on the validation and test sets.   ( [Training Curve](./fig/Training_Curve.jpg)  ) ( [Loss](./fig/Loss.jpg))
 
 
 ### 3.3 Parameter visualization
 
-Here I draw the histogram of layers' weight and bias.\\
-    [Weights 1](./fig/fc1_Weight.jpg) \\
-    [Weights 2](./fig/fc2_Weight.jpg)\\
-    [Bias 1](./fig/fc1_Bias.jpg) \\
-    [Bias 2](./fig/fc2_Bias.jpg)
+Here I draw the histogram of layers' weight and bias.   ( [Weights 1](./fig/fc1_Weight.jpg) ) ( [Weights 2](./fig/fc2_Weight.jpg)) ([Bias 1](./fig/fc1_Bias.jpg))(    [Bias 2](./fig/fc2_Bias.jpg))
 
 From the figure, the distribution of weights in different layer are close, but the bias of the second layer is more dispersed than that of the first layer 
